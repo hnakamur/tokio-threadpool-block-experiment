@@ -33,5 +33,6 @@ pub fn main() {
     }));
 
     // Wait for the task we just spawned to complete.
-    pool.shutdown_on_idle().wait().unwrap();
+    pool.shutdown_now().wait().unwrap();
+    thread::sleep(Duration::from_millis(1000));
 }
