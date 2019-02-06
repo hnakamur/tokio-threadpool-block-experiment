@@ -26,10 +26,10 @@ pub fn main() {
         // case.
         poll_fn(move || {
             blocking(|| {
-                let msg = rx.recv().unwrap();
+                let msg = rx.recv().map_err(|e| panic!("recv error, err={:?}", e)).unwrap();
                 println!("message = {}", msg);
 
-                let msg = rx.recv().unwrap();
+                let msg = rx.recv().map_err(|e| panic!("recv error, err={:?}", e)).unwrap();
                 println!("message = {}", msg);
             }).map_err(|_| panic!("the threadpool shut down"))
         })
