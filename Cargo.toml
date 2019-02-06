@@ -1,0 +1,9 @@
+[package]
+name = "tokio-threadpool-block-experiment"
+version = "0.1.0"
+authors = ["Hiroaki Nakamura <hnakamur@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+futures = "0.1"
+tokio-threadpool = "0.1"
