@@ -1,0 +1,3 @@
+message = hello
+thread '<unnamed>' panicked at 'called `Result::unwrap()` on an `Err` value: RecvError', src/libcore/result.rs:1009:5
+note: Run with `RUST_BACKTRACE=1` for a backtrace.

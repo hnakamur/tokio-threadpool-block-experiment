@@ -28,6 +28,9 @@ pub fn main() {
             blocking(|| {
                 let msg = rx.recv().unwrap();
                 println!("message = {}", msg);
+
+                let msg = rx.recv().unwrap();
+                println!("message = {}", msg);
             }).map_err(|_| panic!("the threadpool shut down"))
         })
     }));
