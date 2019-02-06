@@ -1,2 +1,2 @@
-thread '<unnamed>' panicked at 'called `Result::unwrap()` on an `Err` value: "SendError(..)"', src/libcore/result.rs:1009:5
+thread '<unnamed>' panicked at 'send hello failed', src/main.rs:17:38
 note: Run with `RUST_BACKTRACE=1` for a backtrace.

@@ -14,7 +14,7 @@ pub fn main() {
     // Spawn a thread to send a message
     thread::spawn(move || {
         thread::sleep(Duration::from_millis(500));
-        tx.send("hello").unwrap();
+        tx.send("hello").map_err(|_| panic!("send hello failed"))
     });
 
     let pool = ThreadPool::new();
